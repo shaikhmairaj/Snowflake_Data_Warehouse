@@ -8,7 +8,7 @@ This project simulates a retail company's **Order Management System (OMS)** usin
 
 ## 🧱 Architecture
 
-![Architecture](architecture_diagram.png)
+![Architecture](architecture.png)
 
  **Landing Layer (`L1_LANDING`)**: Contains raw but structured transactional data.
  **Training Layer (`TRAINING`)**: Contains transformed regional sales fact tables.
@@ -51,15 +51,3 @@ This project simulates a retail company's **Order Management System (OMS)** usin
    - Join `ORDERS`, `ORDERITEMS`, `PRODUCTS`, `CUSTOMERS`, and `STORES`.
    - Filter based on `STATE` (e.g., `'TX'`, `'CA'`, `'NY'` → US).
 4. **Query fact tables** for insights like sales amount, customer activity, etc.
-
----
-
-## 🔍 Sample Query
-
-```sql
-SELECT
-  STORE_STATE,
-  COUNT(DISTINCT ORDERID) AS TOTAL_ORDERS,
-  SUM(TOTAL_SALE) AS TOTAL_REVENUE
-FROM TRAINING.SALES_US
-GROUP BY STORE_STATE;
