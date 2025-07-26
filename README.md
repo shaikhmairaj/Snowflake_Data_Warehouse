@@ -8,7 +8,7 @@ This project simulates a retail company's **Order Management System (OMS)** usin
 
 ## 🧱 Architecture
 
-![Architecture](architecture.png)
+Architecture.png
 
  **Landing Layer (`L1_LANDING`)**: Contains raw but structured transactional data.
  **Training Layer (`TRAINING`)**: Contains transformed regional sales fact tables.
